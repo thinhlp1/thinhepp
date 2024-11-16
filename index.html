@@ -18,6 +18,21 @@
     <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var navLinks = document.querySelectorAll("#navbar .nav-link");
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            window.scrollBy(0, 500);
+
+            navLinks.forEach(function (nav) {
+              nav.parentElement.classList.remove("active");
+            });
+            this.parentElement.classList.add("active");
+          });
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -115,7 +130,7 @@
             </div>
             <div class="col-lg-5">
               <div class="home_right_img">
-                <img class="" st src="img/banner/home-right.png" alt="" />
+                <img class="" st src="img/avatar-thinhhepp.png" alt="" />
               </div>
             </div>
           </div>
